@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
+<meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />  
+
+<title>Demo - Bootstrap 5 navbar hide on scroll down, show on scroll up. Code example</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="st.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Vujahday+Script&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+  .autohide{
+    position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030;
+  }
+  .scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
+
+</style>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+    
+    el_autohide = document.querySelector('.autohide');
+    
+    // add padding-top to bady (if necessary)
+    navbar_height = document.querySelector('.navbar').offsetHeight;
+    document.body.style.paddingTop = navbar_height + 'px';
+
+    if(el_autohide){
+      
+      var last_scroll_top = 0;
+      window.addEventListener('scroll', function() {
+            let scroll_top = window.scrollY;
+           if(scroll_top < last_scroll_top) {
+                el_autohide.classList.remove('scrolled-down');
+                el_autohide.classList.add('scrolled-up');
+            }
+            else {
+                el_autohide.classList.remove('scrolled-up');
+                el_autohide.classList.add('scrolled-down');
+            }
+            last_scroll_top = scroll_top;
+
+      }); 
+      // window.addEventListener
+
+    }
+    // if
+    
+  }); 
+  // DOMContentLoaded  end
+
+
+</script>
+
+</head>
+<body>
+
+<!-- ============= COMPONENT ============== -->
+<nav class="autohide navbar navbar-expand-lg navbar-light  bg-light">
+ <div class="container-fluid">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter" style="text-align: left;float: left;">Follow Your Dream</h3>
+    </div>
+  </div>
+</div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="#" style="color: purple;"> Home </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"style="color: purple;"> About </a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: purple;"> Courses  </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+        <li><a class="dropdown-item" href="#">Online Courses</a></li>
+        <li><a class="dropdown-item" href="#">Youtube Channel </a></li>
+        </ul>
+    </li>
+     <li class="nav-item"><a class="nav-link" href="#" style="color: purple;"> Contact </a></li>
+  </ul>
+
+  </div> <!-- navbar-collapse.// -->
+ </div> <!-- container-fluid.// -->
+</nav>
+<!-- ============= COMPONENT END// ============== -->
+
+
+
+<div class="container" style="max-width: 720px">
+
+<header class="py-4">
+  
+</header> <!-- section-header.// -->
+
+
+
+</div><!-- container //  -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6"><img src="bb.jpg"  class="im span"></div>
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+      <p class="vx span">
+        This page has unlimited online courses and Youtube channels. You can choose your hobby class. All you need to do online is Wi-Fi and internet access. You can attend any of the courses on this page at your leisure.Thank you for visiting my page. Have a nice day.
+        <div class="bt">SeeMore</div>
+      </p>
+     
+</div>
+   
+  </div>
+
+
+
+
+
+</div>
+<br><br>
+
+  <div class="bodf">
+        <!-- Carousel Icon Slider
+    ========================================================================================-->
+    <section id="wca_carousel_slider" class="my-3 my-sm-3 my-md-4 my-lg-5">
+        <div class=" container wca_container">
+            <div id="wca_slider" class="">                
+                <div class="wca_slides">
+                    <img src="https://s3.amazonaws.com/media.al-fanarmedia.org/wp-content/uploads/2020/04/06213216/edx.jpg" alt="slide1" class="img-fluid d-block mx-auto lkp">
+                
+                </div>
+                <div class="wca_slides">
+                    <img src="https://w7.pngwing.com/pngs/898/376/png-transparent-united-states-coursera-massive-open-online-course-education-united-states-blue-text-trademark.png" alt="slide2" class="img-fluid d-block mx-auto lkp">
+                 
+                </div>
+                <div class="wca_slides">
+                    <img src="https://logodix.com/logo/1624234.jpg" alt="slide3" class="img-fluid d-block mx-auto lkp" >
+               
+                </div>
+                <div class="wca_slides">
+                    <img src="https://www.co.midland.tx.us/ImageRepository/Document?documentId=1307" alt="slide4" class="img-fluid d-block mx-auto lkp" >
+                              </div>
+                <div class="wca_slides">
+                    <img src="https://cdn.uconnectlabs.com/wp-content/uploads/sites/18/2017/02/linkedin-900x400-1.png" alt="slide5" class="img-fluid d-block mx-auto lkp" style="width: 40%;">
+                     
+                </div>
+                <div class="wca_slides">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUi3JmG6IX-grtYIGhwU-KecGDT5F43hZO2RYBoH0pe3-ztyOR9_VdWmRvzzFgYd9p_S8&usqp=CAU" alt="slide6" class="img-fluid d-block mx-auto lkp" >
+                  
+                </div>
+                <div class="wca_slides">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfvSLS8fj2cvuK3DYug4vZ9cs5mOCLfh6z54D02e-YJg07UXJ1iVcj0Hpuc12123yNfo&usqp=CAU" alt="slide7" class="img-fluid d-block mx-auto lkp" >
+           
+                </div>
+                <div class="wca_slides">
+                    <img src="https://storage-prtl-co.imgix.net/endor/organisations/19983/logos/1581602076_futurelearn.png" alt="slide8" class="img-fluid d-block mx-auto lkp" >
+                  
+                </div>                
+            </div>
+        </div>
+    </section>
+  </div>
+
+
+<div class="boo">
+  <h2 class="span" style="margin-top: 0;">Supported By</h2>
+
+ 
+</div>
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6"><img src="1.png"  class="you"></div>
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+      <p class="y1">
+        <h2 class="y0">Choose Youtube</h2>
+      embd animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      </p>
+    </div>
+  </div>
+  <br>
+ 
+ 
+</div>
+<br><br>
+
+
+
+<div class="boo">
+  <h2 class="span" style="margin-top: 6%;">You can get PDF file</h2>
+
+ 
+</div>
+
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6"><img src="2.gif"  class="hjp"></div>
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"><div class="t1">
+      <p style="margin: 12px;text-align: justify;">
+      embd animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      </p>
+    </div></div>
+  </div>
+  <br>
+  <div class="boo">
+    <h2 class="span" style="margin-top: 6%;">About</h2>
+  
+   <br>
+  </div>
+  <div class="row">
+   
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"><div class="t1 span">
+      <p style="margin: 12px;text-align: justify;">
+      embd animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      embed animated gif in pdf - pdfFiller is a fast, safe, and efficient online form ... See for yourself by reading reviews on the most popular resources:.
+      </p>
+     
+    </div></div>
+    <div class="col-sm-5 col-md-6"><img src="3.png"  class="hjp"></div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  "use strict"
+$(window).ready(function(){
+
+class Slides {
+    constructor(elements){
+        this.elements = elements;        
+        this.render(elements);
+    }
+
+    render(slides){
+        let i;      
+        let visibleSlides = 5;
+        let containerWidth = $(".wca_container").width();
+        $("#wca_slider").css({height : $(".wca_slides").height()});
+        slides.css({ "width": containerWidth / visibleSlides });
+        let slidesWidth= slides.width(); 
+
+        for(i = 0; i < slides.length; i++){            
+            slides.eq(i).css({
+                "left" :  i * slidesWidth ,                            
+            },)
+        };
+    }
+
+    moveRight(slides){
+        let i;
+        for(i = 0; i < slides.length; i++){
+            let left = slides.eq(i).css("left");
+            let pos = Number(left.replace("px", ""));
+            let slideWidth = slides.width();
+            let position= pos + 1;
+
+            slides.eq(i).css({
+                left:  position ,
+                opacity: 1,
+            }); 
+        }
+    }
+
+    startPosition(slides){
+        let i;
+        for(i = 0; i < slides.length; i++){
+            let left = slides.eq(i).css("left");
+            let pos = Number(left.replace("px", ""));
+            let slideWidth= slides.width();
+            let slideRowWidth = slideWidth * (slides.length - 1);
+            let position= pos + slideWidth;
+
+            if(pos > slideRowWidth){
+                slides.eq(i).css(
+                    {left: -1 * slideWidth }
+                );
+            }
+
+        }
+    }
+}
+
+class Slider {
+    constructor(elements){        
+        this.slides = new Slides(elements);
+        this.elements = elements;
+    }
+    start(){       
+        this.slides.moveRight(this.elements);
+        this.slides.startPosition(this.elements);    
+    }
+}
+
+let slider = new Slider($(".wca_slides"));
+setInterval(()=>{
+    slider.start();
+}, 10)
+
+
+let rtime;
+let timeout = false;
+let delta = 200;
+
+$(window).resize(function () {
+    
+    let i;
+    $(".wca_slides").css({ "width": $(".wca_container").width() / 5 });
+    $("#wca_slider").css({height : $(".wca_slides").height()});
+    for (i = 0; i < $(".wca_slides").length; i++) {
+        let slidesWidth = $(".wca_slides").width()
+        $(".wca_slides").eq(i).css(
+            {
+                "left": (i * slidesWidth) /*- (slidesWidth * 2)*/ ,                
+            }
+        )
+    };
+    rtime = new Date();
+    if (timeout === false) {
+        timeout = true;
+        setTimeout(resizeend, delta);
+    }
+});
+
+/*Restart the slider after Winow Resize is over*/
+function resizeend() {
+    if (new Date() - rtime < delta) {
+        setTimeout(resizeend, delta);
+    } else {
+        timeout = false;
+        slider.start();
+    }
+}
+
+});
+
+
+</script>
+  
+</body>
+</html>
